@@ -1,0 +1,6 @@
+@import "./variables";
+.mainHeader__title{
+    background: $gradientColor;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
