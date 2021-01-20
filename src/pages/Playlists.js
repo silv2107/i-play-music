@@ -5,7 +5,7 @@ import MainHeader from "../components/MainHeader";
 function Playlists(){
     return (
         <>
-            <Header>Playlists</Header>
+            <Header theColor={"white"} theBackground={"red"}>Playlists</Header>
             <MainHeader>Playlists</MainHeader>
         </>
     )
