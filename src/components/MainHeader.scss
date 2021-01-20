@@ -1,6 +1,13 @@
 @import "./variables";
-.mainHeader__title{
+.mainHeader{
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: $headLine3;
+    font-weight: bolder;
+    &__title{
+    margin: 10px;
     background: $gradientColor;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
 }
