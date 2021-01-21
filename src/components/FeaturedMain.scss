@@ -1,0 +1,40 @@
+@import "./variables.scss";
+
+.featuredMain{
+    margin-top: 20px;
+    display: grid;
+    grid-gap:30px;
+    font-family: $fontFamily;
+    &__pageOne{
+        justify-self: center;
+        position: relative;
+        .featuredDark{
+            position: absolute;
+            top: 12px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+        }
+        .titleOne{
+            position: absolute;
+            top: 250px;
+            left: 20px;
+            color: white;
+            width: 50%;
+        }
+       
+        h6{
+            position: absolute;
+            top: 320px;
+            left: 20px; 
+            color: white;
+        }
+    }
+   
+}
+
+img{
+    border-radius: 10px;
+}
+
