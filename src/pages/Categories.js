@@ -1,4 +1,5 @@
 import React from "react";
+import CategoryMain from "../components/CategoryMain";
 import Header from "../components/Header";
 import MainHeader from "../components/MainHeader";
 
@@ -7,6 +8,8 @@ function Categories(){
         <>
             <Header>Categories</Header>
             <MainHeader>Categories</MainHeader>
+            <CategoryMain/>
+            
         </>
     )
 }
