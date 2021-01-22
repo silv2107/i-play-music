@@ -10,6 +10,7 @@ function CategoryField({title, theBackgroundColor}){
             </summary>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </details>
+        
        
     )
 }
