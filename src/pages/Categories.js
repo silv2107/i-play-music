@@ -7,7 +7,7 @@ function Categories(){
     return (
         <>
             <Header>Categories</Header>
-            <MainHeader>Categories</MainHeader>
+            <MainHeader theColor="transparent">Categories</MainHeader>
             <main className="categoryMain">
                 <CategoryField title="Alternative" theBackgroundColor="red"/>
                 <CategoryField title="Alternative" theBackgroundColor="yellow"/> 

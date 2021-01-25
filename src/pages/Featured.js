@@ -7,7 +7,7 @@ function Featured(){
     return (
         <>
             <Header>Featured</Header>
-            <MainHeader>Featured</MainHeader>
+            <MainHeader theColor="transparent">Featured</MainHeader>
             <FeaturedMain/>
         </>
     )

@@ -10,7 +10,7 @@ function Albums(){
     return (
         <article className="albumsWrapper">
             <Header>Music</Header>
-            <MainHeader>All Albums</MainHeader>
+            <MainHeader theColor="transparent">All Albums</MainHeader>
             <div className="headerFooter">
                 <article className="headerFooter__titleViewAll">
                     <h5>Featured Albums</h5>
@@ -21,6 +21,8 @@ function Albums(){
                     <SliderImg image="./images/featured1.png" imageDescription="nameOfSong"/>
                     <SliderImg image="./images/featured.png" imageDescription="nameOfSong"/>
                     <SliderImg image="./images/featured1.png" imageDescription="nameOfSong"/>
+                    <SliderImg image="./images/featured1.png" imageDescription="nameOfSong"/>
+                    <SliderImg image="./images/featured.png" imageDescription="nameOfSong"/>
                     <SliderImg image="./images/featured1.png" imageDescription="nameOfSong"/>
                     <SliderImg image="./images/featured.png" imageDescription="nameOfSong"/>
                 </article>
