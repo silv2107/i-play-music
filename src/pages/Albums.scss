@@ -1,0 +1,44 @@
+@import "../components/variables.scss";
+.albumsWrapper{
+    overflow: hidden;
+    .headerFooter{
+        &__slider{
+            // padding: 0 0 0 20px;
+            padding-left: 20px;
+            min-width: 100px;
+            display: flex; 
+            justify-content: space-between;  
+            overflow-x: auto;  
+            scrollbar-width: none; 
+            .sliderContainer{
+                margin-right: 10px;
+                &__imgLink{
+                    img{
+                        object-fit: cover;
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+        
+        }
+        &__slider::-webkit-scrollbar{
+            display: none;
+        }
+        &__titleViewAll{
+            padding: 0 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: $fontFamily;
+            font-size: $headLine6;
+            h5{
+                font-weight: 700;
+            }
+            a{
+                font-weight: 200;
+                color: #FF1168;
+            }
+        }
+    }
+}
