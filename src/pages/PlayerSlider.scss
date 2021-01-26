@@ -1,0 +1,84 @@
+.playerRange{
+    &__bar{
+        margin: 7.45px 0;
+        background-color: transparent;
+        -webkit-appearance: none;
+    }
+    &__bar:focus {
+        outline: none;
+    }
+    &__bar::-webkit-slider-runnable-track {
+        background: #ff1168;
+        border: 0;
+        border-radius: 2.9px;
+        width: 100%;
+        height: 2.1px;
+        cursor: pointer;
+    }
+    &__bar::-webkit-slider-thumb {
+        margin-top: -10.45px;
+        width: 25px;
+        height: 25px;
+        background: #ff1168;
+        border: 7px solid transparentize($color: #ff1168, $amount: 0.5);
+        background-clip: padding-box;
+        border-radius: 50px;
+        cursor: pointer;
+        -webkit-appearance: none;
+    }
+    &__bar:focus::-webkit-slider-runnable-track {
+        background: #ff2b78;
+      }
+      &__bar::-moz-range-track {
+        background: #ff1168;
+        border: 0;
+        border-radius: 2.9px;
+        width: 100%;
+        height: 2.1px;
+        cursor: pointer;
+      }
+      &__bar::-moz-range-thumb {
+        width: 16px;
+        height: 17px;
+        background: #ff1168;
+        border: 7px solid transparentize($color: #ff1168, $amount: 0.5);
+        background-clip: padding-box;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      &__bar::-ms-track {
+        background: transparent;
+        border-color: transparent;
+        border-width: 7.45px 0;
+        color: transparent;
+        width: 100%;
+        height: 2.1px;
+        cursor: pointer;
+      }
+      &__bar::-ms-fill-lower {
+        background: #f7005a;
+        border: 0;
+        border-radius: 5.8px;
+      }
+      &__bar::-ms-fill-upper {
+        background: #ff1168;
+        border: 0;
+        border-radius: 5.8px;
+      }
+      &__bar::-ms-thumb {
+        width: 16px;
+        height: 17px;
+        background: #ff1168;
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 50px;
+        cursor: pointer;
+        margin-top: 0px;
+        /*Needed to keep the Edge thumb centred*/
+      }
+      &__bar:focus::-ms-fill-lower {
+        background: #ff1168;
+      }
+      &__bar:focus::-ms-fill-upper {
+        background: #ff2b78;
+      }
+}

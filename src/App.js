@@ -6,6 +6,7 @@ import Albums from './pages/Albums';
 import Playlists from './pages/Playlists';
 import Featured from './pages/Featured';
 import Categories from './pages/Categories';
+import Player from './pages/Player';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Playlists path="/playlists"/>
           <Featured path="/"/>
           <Categories path="/categories"/>
+          <Player path="/player"/>
       </Router>
     </div>
   );
