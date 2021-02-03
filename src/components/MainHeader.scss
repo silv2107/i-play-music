@@ -5,10 +5,10 @@
     font-size: $headLine3;
     font-weight: bolder;
     &__title{
-    display: inline-block;
-    margin: 10px;
-    background: $gradientColor;
-    background-clip: text;
-    // -webkit-text-fill-color: transparent;
+        display: inline-block;
+        margin: 10px 0px;
+        background: $gradientColor;
+        background-clip: text;
+        // -webkit-text-fill-color: transparent;
     }
 }

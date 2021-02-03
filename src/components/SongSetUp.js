@@ -1,11 +1,11 @@
 import React from "react";
 import "./SongSetUp.scss";
-import { Link } from "@reach/router";
+import { Link, navigate } from "@reach/router";
 
 
-function SongSetUp({image, styleContainer,styleImg, gridSize, imageDescription, title, author, amount}){
+function SongSetUp({image, styleContainer,styleImg, gridSize, imageDescription, title, author, amount, trackID}){
     return(
-        <article className="songWrapper" style={gridSize}>
+        <article className="songWrapper" style={gridSize} onClick={() => navigate("/player/" + trackID)}>
             <Link to="/player" style={styleContainer} className="songWrapper__imgContainer">
                 <img style={styleImg} className="songWrapper__img" src={image} alt={imageDescription}/>
             </Link>

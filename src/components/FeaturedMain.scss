@@ -2,31 +2,38 @@
 
 .featuredMain{
     margin-top: 20px;
+    margin-bottom: 80px;
     display: grid;
+    grid-template-columns: 100%;
+    padding: 0 22.7px;
     grid-gap:30px;
     font-family: $fontFamily;
     &__pageOne{
         justify-self: center;
         position: relative;
+        .featuredBackground{
+            width: 100%;
+        }
         .featuredDark{
             position: absolute;
-            top: 12px;
+            top: 0;
             left: 0;
             bottom: 0;
             right: 0;
             width: 100%;
+            height: 98%;
         }
         .titleOne{
             position: absolute;
-            top: 250px;
-            left: 20px;
+            top: 0px;
+            left: 100px;
             color: white;
-            width: 50%;
+            width: 70%;
         }
        
         h6{
             position: absolute;
-            top: 320px;
+            top: 280px;
             left: 20px; 
             color: white;
         }

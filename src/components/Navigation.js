@@ -14,7 +14,7 @@ function Navigation(){
                         <Link to="/playlists" className="primaryNavigation__link"><img src="./icons/playlists.svg" alt="playlists icon"/></Link>
                     </li>
                     <li className="navigation__item">
-                        <Link to="/" className="primaryNavigation__link"><div><img src="./icons/featured.svg" alt="featured icon"/></div></Link>
+                        <Link to="/featured" className="primaryNavigation__link"><div><img src="./icons/featured.svg" alt="featured icon"/></div></Link>
                     </li>
                     <li className="navigation__item">
                         <button className="navigation__button"><img src="./icons/colorTheme.svg" alt="colorTheme icon"/></button>
