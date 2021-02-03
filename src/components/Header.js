@@ -8,7 +8,7 @@ function Header({children, theColor,brightness, symbolColor, theBackground, theM
                 &#60;
             </button>
             <h4 className="header__title" style={{color:theColor}}>{children}</h4>
-            <div  style={theModifier} className="header__search"><img style={{filter:brightness}} src="./icons/search.svg" alt="search icon"/></div>
+            <div  style={theModifier} className="header__search"><img style={{filter:brightness}} src="/icons/search.svg" alt="search icon"/></div>
         </article>
     )
 }
