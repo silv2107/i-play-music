@@ -12,7 +12,6 @@ function Featured(){
     
     var [content, setContent] = useState([]);
 
-    console.log(content);
     
     // var arr = useState("hi");
 	// var content = arr[0];
@@ -31,7 +30,6 @@ function Featured(){
         
 	
     }, [token, setContent]);
-    console.log(content);
 
     return (
         <>
