@@ -29,7 +29,6 @@ function Player(props){
             //console.log(content[0].track.id); // name - divide it into two variables (song name and artist name)
             //console.log(content.tracks.items[0].track.duration_ms);// time - make two variable (min and sec)
         });
-        console.log(content);
         
 	
     }, [token,id, setContent]);

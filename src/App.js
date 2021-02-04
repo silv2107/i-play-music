@@ -24,6 +24,7 @@ function App() {
             <Login default/>
             <Callback path="/callback"/>
             <Albums path="/albums"/>      
+            <Playlists path="/playlists"/>
             <Playlists path="/playlists/:id"/>
             <Featured path="/featured"/>
             <Categories path="/categories"/>
