@@ -54,6 +54,7 @@ function Playlists(props){
 
     var theImage = content.images ? content.images[0].url : null; //ternary operator that checks whether content.images exists or not
 
+
     return (
         <article style={{backgroundImage:`url(${Image})`}} className="albumsWrapper playlistWrapper">
             <Header theColor={"white"} symbolColor="white" brightness="brightness(100)">Playlists</Header>
