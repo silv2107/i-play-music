@@ -31,7 +31,6 @@ function Albums(){
             setFeaturedContent(response.data.playlists.items)// det er et array, normalt response.data er objekt
             //console.log(featuredContent); // gem content.playlists.item som en variable arr
         });
-        console.log(featuredContent);
 	
     }, [token, setFeaturedContent]);
 
@@ -61,7 +60,7 @@ function Albums(){
                     {featuredContent && featuredContent.map(item => {
                          var featuredImage = item.images[0].url;
                          //console.log(featuredImage);
-                         return <SliderImg item={item} image={featuredImage} imageDescription="nameOfSong"/>
+                         return <SliderImg key={item.id} item={item} image={featuredImage} imageDescription="nameOfSong"/>
                     })}
                 </article>
                 <article className="headerFooter__titleViewAll">
