@@ -41,7 +41,7 @@ function Featured() {
 				{content &&
 					content.map((item) => {
 						return (
-							<FeaturedCard key={item.id} item={item} image={item.images[0].url} album={item.name} genre={item.type} />
+							<FeaturedCard key={item.id} item={item} image={item.images[0].url} /* album={item.name} */ genre={item.type} />
 						);
 					})}
 			</main>
