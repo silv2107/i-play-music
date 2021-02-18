@@ -1,5 +1,5 @@
 import mockedAxios from "axios";
-import { act, cleanup, render, screen, waitFor } from "@testing-library/react";
+import {act, cleanup, render, screen, waitFor} from "@testing-library/react";
 import Featured from "../pages/Featured";
 import TokenContext from "../TokenContext";
 
