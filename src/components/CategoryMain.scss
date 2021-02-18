@@ -1,31 +1,28 @@
 @import "./variables.scss";
 
-.categoryMain{
-    display: grid;
-    grid-gap:15px;
-    .accordian{
-        width: 87%;
-        justify-self: center;
-        &__categoryBox::-webkit-details-marker{
-            display: none;
-        }
-        &__categoryBox{
-            padding: 0 20px 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-            color: white;
-            font-family: $fontFamily;
-            border-radius: 10px;
-            height: 50px;
-        }
-    
-    }
+.categoryMain {
+	display: grid;
+	grid-gap: 15px;
+	.accordian {
+		width: 87%;
+		justify-self: center;
+		&__categoryBox::-webkit-details-marker {
+			display: none;
+		}
+		&__categoryBox {
+			padding: 0 20px 0 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			list-style: none;
+			color: white;
+			font-family: $fontFamily;
+			border-radius: 10px;
+			height: 50px;
+		}
+	}
 }
-
-
 
 // .categoryMain.accordian__categoryBox::webkit-details-marker{
 //     display: none;
-// } 
+// }

@@ -6,60 +6,61 @@ import TokenContext from "../TokenContext";
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 
+function Categories() {
+	var [components, setComponents] = useState([]);
 
-function Categories(){
-    var [components, setComponents] = useState([])
+	useEffect(function () {
+		fetch("./colorData.json")
+			.then(function (response) {
+				return response.json();
+			})
+			.then(function (data) {
+				setComponents(data);
+			});
+	}, []);
 
-    useEffect(function(){
-        fetch("./colorData.json")
-            .then(function(response){
-                return response.json();
-            })
-            .then(function(data){
-                setComponents(data);
-            })
-    }, [])
-    //console.log(components.colors[0]);
+	var [token] = useContext(TokenContext); //access token vdvnkvnklsvnklsdlvnsnvsl
 
-    var [token] = useContext(TokenContext);//access token vdvnkvnklsvnklsdlvnsnvsl
+	var [content, setContent] = useState([]);
 
-    var [content, setContent] = useState([]);
-
-    
-    // var arr = useState("hi");
+	// var arr = useState("hi");
 	// var content = arr[0];
-    // var setContent = arr[1];
-    
-    useEffect(function() {
-		axios.get("https://api.spotify.com/v1/browse/categories?country=GB", {
-			headers: {
-				"Authorization": "Bearer " + token.access_token
-			}
-		})
-        .then(response => {
-            setContent(response.data)// det er et array, normalt response.data er objekt
-            //console.log(content); // gem content.playlists.item som en variable arr
-        });
-        //console.log(content.categories.items);
-	
-    }, [token, setContent]);
-    //console.log(content.categories.items);
+	// var setContent = arr[1];
 
-    return (
-        <>
-            <Header>Categories</Header>
-            <MainHeader theColor="transparent">Categories</MainHeader>
-            <main className="categoryMain">
-                {content.categories?.items.map(item => {
-                    var theIndex = content.categories.items.indexOf(item);
-                    console.log(components.colors && components.colors[theIndex].color);
-                    return <CategoryField key={item.id} title={item.name} item={item} theBackgroundColor={components.colors && components.colors[theIndex].color}/>
+	useEffect(
+		function () {
+			axios
+				.get("https://api.spotify.com/v1/browse/categories?country=GB", {
+					headers: {
+						Authorization: "Bearer " + token.access_token,
+					},
+				})
+				.then((response) => {
+					setContent(response.data); // det er et array, normalt response.data er objekt
+				});
+		},
+		[token, setContent]
+	);
 
-                })}
-            </main>
-            
-        </>
-    )
+	return (
+		<>
+			<Header>Categories</Header>
+			<MainHeader theColor="transparent">Categories</MainHeader>
+			<main className="categoryMain">
+				{content.categories?.items.map((item) => {
+					var theIndex = content.categories.items.indexOf(item);
+					return (
+						<CategoryField
+							key={item.id}
+							title={item.name}
+							item={item}
+							theBackgroundColor={components.colors && components.colors[theIndex].color}
+						/>
+					);
+				})}
+			</main>
+		</>
+	);
 }
 
 export default Categories;
