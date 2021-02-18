@@ -35,7 +35,7 @@ function Featured() {
 
 	return (
 		<>
-			<Header>Featured</Header>
+			<Header>Feature</Header>
 			<MainHeader theColor="transparent">Featured</MainHeader>
 			<main className="featuredMain">
 				{content &&
