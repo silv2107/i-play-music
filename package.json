@@ -22,7 +22,7 @@
 		"test": "cross-env CI=true react-scripts test",
 		"eject": "react-scripts eject",
 		"prettier": "prettier --write ."
-	},
+		},
 	"eslintConfig": {
 		"extends": [
 			"react-app",
