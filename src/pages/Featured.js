@@ -3,7 +3,7 @@ import FeaturedCard from "../components/FeaturedCard";
 import Header from "../components/Header";
 import MainHeader from "../components/MainHeader";
 import TokenContext from "../TokenContext";
-import { useState, useEffect, useContext } from "react";
+import {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import "../components/FeaturedMain.scss";
 
