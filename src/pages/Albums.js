@@ -57,7 +57,10 @@ function Albums() {
 	);
 	return (
 		<article className="albumsWrapper">
-			<ErrorBoundary> <Header>Music</Header></ErrorBoundary>
+			<ErrorBoundary>
+				{" "}
+				<Header>Music</Header>
+			</ErrorBoundary>
 			<MainHeader theColor="transparent">All Albums</MainHeader>
 			<div className="headerFooter">
 				<article className="headerFooter__titleViewAll">

@@ -5,7 +5,7 @@ class ErrorBoundary extends Component {
 		super(props);
 
 		this.state = {
-			hasError: false
+			hasError: false,
 		};
 	}
 	static getDerivedStateFromError() {
@@ -15,7 +15,6 @@ class ErrorBoundary extends Component {
 	componentDidCatch(error, info) {
 		console.log("ErrorBoundary caught an error", error, info);
 	}
-
 
 	render() {
 		if (this.state.hasError) {
