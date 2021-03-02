@@ -8,6 +8,10 @@ import "./Albums.scss";
 import TokenContext from "../TokenContext";
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import SliderErrorBoundary from "../components/SliderErrorBoundary";
+import ErrorBoundary from "../components/ErrorBoundary";
+//import ErrorBoundary from "../components/ErrorBoundary";
+//import SliderErrorBoundary from "..components/SliderErrorBoundary";
 
 function Albums() {
 	var [token] = useContext(TokenContext); //access token vdvnkvnklsvnklsdlvnsnvsl
@@ -53,21 +57,23 @@ function Albums() {
 	);
 	return (
 		<article className="albumsWrapper">
-			<Header>Music</Header>
+			<ErrorBoundary> <Header>Music</Header></ErrorBoundary>
 			<MainHeader theColor="transparent">All Albums</MainHeader>
 			<div className="headerFooter">
 				<article className="headerFooter__titleViewAll">
 					<h5>Featured Albums</h5>
 					<Link to="/">View All</Link>
 				</article>
-				<article className="headerFooter__slider">
-					{featuredContent &&
-						featuredContent.map((item) => {
-							var featuredImage = item.images[0].url;
-							//console.log(featuredImage);
-							return <SliderImg key={item.id} item={item} image={featuredImage} imageDescription="nameOfSong" />;
-						})}
-				</article>
+				<SliderErrorBoundary>
+					<article className="headerFooter__slider">
+						{featuredContent &&
+							featuredContent.map((item) => {
+								var featuredImage = item.images[0].url;
+								//console.log(featuredImage);
+								return <SliderImg key={item.id} item={item} image={featuredImage} imageDescription="nameOfSong" />;
+							})}
+					</article>
+				</SliderErrorBoundary>
 				<article className="headerFooter__titleViewAll">
 					<h5>New Releases</h5>
 					<Link to="/">View All</Link>

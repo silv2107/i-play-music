@@ -6,6 +6,7 @@ import TokenContext from "../TokenContext";
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import "../components/FeaturedMain.scss";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 function Featured() {
 	var [token] = useContext(TokenContext); //access token vdvnkvnklsvnklsdlvnsnvsl
@@ -36,7 +37,9 @@ function Featured() {
 	return (
 		<>
 			<Header>Feature</Header>
-			<MainHeader theColor="transparent">Featured</MainHeader>
+			<ErrorBoundary>
+				<MainHeader theColor="transparent">Featured</MainHeader>
+			</ErrorBoundary>
 			<main className="featuredMain">
 				{content &&
 					content.map((item) => {

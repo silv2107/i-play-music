@@ -9,6 +9,7 @@ import SongSetUp from "../components/SongSetUp";
 import TokenContext from "../TokenContext";
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 function Playlists(props) {
 	var id = props.id;
@@ -56,46 +57,50 @@ function Playlists(props) {
 	var theImage = content.images ? content.images[0].url : null; //ternary operator that checks whether content.images exists or not
 
 	return (
-		<article style={{ backgroundImage: `url(${Image})` }} className="albumsWrapper playlistWrapper">
-			<Header theColor={"white"} symbolColor="white" brightness="brightness(100)">
-				Playlists
-			</Header>
-			<MainHeader theColor="white">Playlists</MainHeader>
-			<section className="headerFooter__slider">
-				<SliderImg image="/images/featured.png" imageDescription="nameOfSong" />
-				<SliderImg image={theImage} imageDescription="nameOfSong" />
-				<SliderImg image="/images/featured.png" imageDescription="nameOfSong" />
-			</section>
-			<section className="titleFooter">
-				<h5 className="titleFooter__title">Top 50 Rock Ballads</h5>
-			</section>
-			<main className="songMain songPlaylist">
-				{content.tracks?.items.map((item) => {
-					var trackID = item.track.id;
-					var minSec = item.track.duration_ms / 1000 / 60;
-					var min = Math.floor(item.track.duration_ms / 1000 / 60);
-					var sec = Math.floor((minSec % min) * 100 * 0.6);
-					var time = min + ": " + sec;
-					return (
-						<SongSetUp
-							key={item.track.id}
-							trackID={trackID}
-							gridSize={myGridSize}
-							styleContainer={myStyleContainer}
-							styleImg={myStyleImg}
-							image="/icons/playIcon.svg"
-							imageDescription="song"
-							title={item.track.name}
-							author={item.track.artists[0].name}
-							amount={time}
-						/>
-					);
-				})}
-			</main>
-			<footer className="playlistFooter">
-				<button className="playlistFooter__button">LISTEN ALL</button>
-			</footer>
-		</article>
+		
+			<article style={{ backgroundImage: `url(${Image})` }} className="albumsWrapper playlistWrapper">
+				<Header theColor={"white"} symbolColor="white" brightness="brightness(100)">
+					Playlists
+				</Header>
+				<ErrorBoundary>
+					<MainHeader theColor="white">Playlists</MainHeader>	
+				</ErrorBoundary>
+
+				<section className="headerFooter__slider">
+					<SliderImg image="/images/featured.png" imageDescription="nameOfSong" />
+					<SliderImg image={theImage} imageDescription="nameOfSong" />
+					<SliderImg image="/images/featured.png" imageDescription="nameOfSong" />
+				</section>
+				<section className="titleFooter">
+					<h5 className="titleFooter__title">Top 50 Rock Ballads</h5>
+				</section>
+				<main className="songMain songPlaylist">
+					{content.tracks?.items.map((item) => {
+						var trackID = item.track.id;
+						var minSec = item.track.duration_ms / 1000 / 60;
+						var min = Math.floor(item.track.duration_ms / 1000 / 60);
+						var sec = Math.floor((minSec % min) * 100 * 0.6);
+						var time = min + ": " + sec;
+						return (
+							<SongSetUp
+								key={item.track.id}
+								trackID={trackID}
+								gridSize={myGridSize}
+								styleContainer={myStyleContainer}
+								styleImg={myStyleImg}
+								image="/icons/playIcon.svg"
+								imageDescription="song"
+								title={item.track.name}
+								author={item.track.artists[0].name}
+								amount={time}
+							/>
+						);
+					})}
+				</main>
+				<footer className="playlistFooter">
+					<button className="playlistFooter__button">LISTEN ALL</button>
+				</footer>
+			</article>
 	);
 }
 

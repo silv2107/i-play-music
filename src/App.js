@@ -11,13 +11,12 @@ import Login from "./pages/Login";
 import Callback from "./pages/Callback";
 import TokenContext from "./TokenContext";
 import { useState } from "react";
-import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
 	var tokenState = useState(null);
 
 	return (
-		//<ErrorBoundary>
+		
 		<div className="App">
 			<TokenContext.Provider value={tokenState}>
 				<Navigation />
@@ -33,7 +32,6 @@ function App() {
 				</Router>
 			</TokenContext.Provider>
 		</div>
-		//</ErrorBoundary>
 	);
 }
 

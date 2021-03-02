@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class ErrorBoundary extends Component {
+class SliderErrorBoundary extends Component {
 	constructor(props) {
 		super(props);
 
@@ -13,7 +13,7 @@ class ErrorBoundary extends Component {
 	}
 
 	componentDidCatch(error, info) {
-		console.log("ErrorBoundary caught an error", error, info);
+		console.log("SliderErrorBoundary caught an error", error, info);
 	}
 
 
@@ -21,8 +21,8 @@ class ErrorBoundary extends Component {
 		if (this.state.hasError) {
 			return (
 				<>
-					<h1>500: There was an error</h1>
-					<p>Something went wrong, try later</p>
+					<h1>An error has occured. Images are not available</h1>
+					<p>Please try later</p>
 				</>
 			);
 		}
@@ -31,4 +31,4 @@ class ErrorBoundary extends Component {
 	}
 }
 
-export default ErrorBoundary;
+export default SliderErrorBoundary;

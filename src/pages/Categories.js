@@ -5,6 +5,7 @@ import MainHeader from "../components/MainHeader";
 import TokenContext from "../TokenContext";
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 function Categories() {
 	var [components, setComponents] = useState([]);
@@ -45,7 +46,7 @@ function Categories() {
 	return (
 		<>
 			<Header>Categories</Header>
-			<MainHeader theColor="transparent">Categories</MainHeader>
+			<ErrorBoundary> <MainHeader theColor="transparent">Categories</MainHeader></ErrorBoundary>
 			<main className="categoryMain">
 				{content.categories?.items.map((item) => {
 					var theIndex = content.categories.items.indexOf(item);
