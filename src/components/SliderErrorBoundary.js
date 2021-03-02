@@ -5,7 +5,7 @@ class SliderErrorBoundary extends Component {
 		super(props);
 
 		this.state = {
-			hasError: false
+			hasError: false,
 		};
 	}
 	static getDerivedStateFromError() {
@@ -15,7 +15,6 @@ class SliderErrorBoundary extends Component {
 	componentDidCatch(error, info) {
 		console.log("SliderErrorBoundary caught an error", error, info);
 	}
-
 
 	render() {
 		if (this.state.hasError) {

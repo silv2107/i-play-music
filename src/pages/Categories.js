@@ -46,7 +46,10 @@ function Categories() {
 	return (
 		<>
 			<Header>Categories</Header>
-			<ErrorBoundary> <MainHeader theColor="transparent">Categories</MainHeader></ErrorBoundary>
+			<ErrorBoundary>
+				{" "}
+				<MainHeader theColor="transparent">Categories</MainHeader>
+			</ErrorBoundary>
 			<main className="categoryMain">
 				{content.categories?.items.map((item) => {
 					var theIndex = content.categories.items.indexOf(item);

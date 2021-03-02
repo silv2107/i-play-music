@@ -16,7 +16,6 @@ function App() {
 	var tokenState = useState(null);
 
 	return (
-		
 		<div className="App">
 			<TokenContext.Provider value={tokenState}>
 				<Navigation />
