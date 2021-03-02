@@ -1,79 +1,78 @@
 @import "../components/variables.scss";
 
-.playerWrapper{
-    height: 100vh;
-    // background-color: red;
-    .soundPhotoWrapper{
-        margin-top: 3.5vh;
-        height: 40vh;
-        background-size: auto 156%;
-        background-position: 50%;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-            width: 60%;
-        }
-    }
-    .songContentWrapper{
-        height: 40vh;
-        .songContent{
-            text-align: center;
-            font-family: $fontFamily;
-            &__title{
-                font-size: $headLine5;
-                font-weight: 700;
-                margin-top: 30px;
-                margin-bottom: 5px;
-            }
-            &__name{
-                font-size: $headLine7;
-                font-weight: 200;
-                margin-top: 0px;
-                margin-bottom: 0px;
-            }
-        }
-    }
-    .playerRange{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &__bar{
-            width: 87%;
-        }
-        
-        &__time{
-            width: 87%;
-            display: flex;
-            justify-content: space-between;
-            p{
-                margin: 0;
-                font-family: $fontFamily;
-                font-weight: 200;
-                font-size: $headLine7;
-            }
-        }
-       
-    }
-    .playerButtons{
-        margin-top: 4vh;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 30px;
-        &__button{
-            background: transparent;
-            border: none;
-            img{
-                height: 20px;
-                width: 20px;
-            }
-        }
-        &__buttonPlay{
-            background: linear-gradient(90deg,#EE0979 0%, #FF6A00 45%);
-            border-radius:50%;
-            width:60px;
-            height: 60px;
-        }
-    }
+.playerWrapper {
+	height: 100vh;
+	// background-color: red;
+	.soundPhotoWrapper {
+		margin-top: 3.5vh;
+		height: 40vh;
+		background-size: auto 156%;
+		background-position: 50%;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			width: 60%;
+		}
+	}
+	.songContentWrapper {
+		height: 40vh;
+		.songContent {
+			text-align: center;
+			font-family: $fontFamily;
+			&__title {
+				font-size: $headLine5;
+				font-weight: 700;
+				margin-top: 30px;
+				margin-bottom: 5px;
+			}
+			&__name {
+				font-size: $headLine7;
+				font-weight: 200;
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+		}
+	}
+	.playerRange {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&__bar {
+			width: 87%;
+		}
+
+		&__time {
+			width: 87%;
+			display: flex;
+			justify-content: space-between;
+			p {
+				margin: 0;
+				font-family: $fontFamily;
+				font-weight: 200;
+				font-size: $headLine7;
+			}
+		}
+	}
+	.playerButtons {
+		margin-top: 4vh;
+		display: flex;
+		justify-content: space-between;
+		padding: 0 30px;
+		&__button {
+			background: transparent;
+			border: none;
+			img {
+				height: 20px;
+				width: 20px;
+			}
+		}
+		&__buttonPlay {
+			background: linear-gradient(90deg, #ee0979 0%, #ff6a00 45%);
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+		}
+	}
 }

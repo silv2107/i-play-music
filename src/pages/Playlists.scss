@@ -1,34 +1,34 @@
 @import "../components/variables.scss";
 
-.playlistWrapper{
-    background-repeat: no-repeat;
-   
-    .titleFooter{
-        width: 110px;
-        text-align: center;
-        margin: 0 auto;
-        font-family: $fontFamily;
-        font-size: $headLine5;
-        &__title{
-            font-weight: 700;
-        }
-    }
+.playlistWrapper {
+	background-repeat: no-repeat;
+
+	.titleFooter {
+		width: 110px;
+		text-align: center;
+		margin: 0 auto;
+		font-family: $fontFamily;
+		font-size: $headLine5;
+		&__title {
+			font-weight: 700;
+		}
+	}
 }
 
-.playlistFooter{
-    margin: 50px 0 110px 0;
-    display: flex;
-    justify-content: center;
-    &__button{
-        background: transparent;
-        font-family: $fontFamily;
-        border:  3px solid $primaryColor;
-        font-size: $headLine5;
-        font-weight: 400;
-        width: 100%;
-        margin: 0 22.7px;
-        padding: 10px 40px;
-        border-radius: 25px;
-        color: $primaryColor;
-    }
+.playlistFooter {
+	margin: 50px 0 110px 0;
+	display: flex;
+	justify-content: center;
+	&__button {
+		background: transparent;
+		font-family: $fontFamily;
+		border: 3px solid $primaryColor;
+		font-size: $headLine5;
+		font-weight: 400;
+		width: 100%;
+		margin: 0 22.7px;
+		padding: 10px 40px;
+		border-radius: 25px;
+		color: $primaryColor;
+	}
 }
