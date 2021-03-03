@@ -6,7 +6,8 @@ export default function Login() {
 		response_type: "code",
 		client_id: "755eadbb40354811852d64a6219a5a6e",
 		scope: "user-read-private user-read-email",
-		redirect_uri: "http://localhost:8888/callback",
+		// redirect_uri: "http://localhost:8888/callback",
+		redirect_uri:"https://i-play-music-silviu.netlify.app/callback",
 		state: "mmmbdfmbdgfrt09tgg3ekmgkrmgrmgekgmegmemtsvmenvwo",
 	});
 
